@@ -1,8 +1,10 @@
 #root {
-  max-width: 1280px;
+  //max-width: 1280px;
   margin: 0 auto;
+}
+
+header, main, footer {
   padding: 2rem;
-  text-align: center;
 }
 
 header ul {
@@ -15,9 +17,4 @@ header ul {
     text-transform: uppercase;
     letter-spacing: 1px;
     list-style: none;
-}
-
-footer {
-    background-color: #361720;
-    color: #fff;
 }

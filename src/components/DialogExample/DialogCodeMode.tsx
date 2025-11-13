@@ -1,9 +1,8 @@
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
-const dialogButtonCode = `
-<button className="dialog-trigger" aria-haspopup="dialog" aria-controls="example-dialog">
-  This triggers a dialog!
+const dialogButtonCode = `<button className="dialog-trigger" aria-haspopup="dialog" aria-controls="example-dialog">
+  Click for magic
 </button>`;
 
 function DialogCodeMode() {
@@ -14,7 +13,7 @@ function DialogCodeMode() {
                 {dialogButtonCode}
             </SyntaxHighlighter>
 
-            <p>And here's the the code behind the dialog element:</p>
+            <p>And here's the code behind the dialog element:</p>
             <pre>
                 <code>
                       <dialog id="example-dialog" className="" aria-labelledby="dialog-title" aria-describedby="dialog-desc">

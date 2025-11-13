@@ -4,7 +4,7 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import DialogPage from "./pages/DialogPage";
 import NotFound from "./pages/NotFound";
-import './App.css'
+import './App.scss'
 
 function App() {
   return (
