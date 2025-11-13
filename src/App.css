@@ -5,10 +5,19 @@
   text-align: center;
 }
 
-.card {
-  padding: 2em;
+header ul {
+    display: flex;
+    align-content: space-between;
+    justify-content: center;
+    gap: 1rem;
+    font-size: .9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    list-style: none;
 }
 
-.read-the-docs {
-  color: #888;
+footer {
+    background-color: #361720;
+    color: #fff;
 }
