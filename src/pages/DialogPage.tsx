@@ -5,7 +5,7 @@ import DialogInfo from "../components/DialogExample/DialogInfo";
 
 export default function DialogPage() {
     return(
-        <section className="dialog-page">
+        <section id="dialog-page">
             <h1>Little A11y Dialog</h1>
             <Tabs
                 tabs={[
@@ -13,7 +13,9 @@ export default function DialogPage() {
                     { label: "Code Mode", content: <DialogCodeMode /> },
                 ]}
             />
-            <DialogInfo />
+            <div className="component-desc">
+                <DialogInfo />
+            </div>
         </section>
     );
 }

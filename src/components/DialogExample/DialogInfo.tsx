@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 function DialogInfo(){
     return(
-        <div className="dialog-info">
+        <>
             <section>
                 <h2>
                     What is it?
@@ -61,7 +61,7 @@ function DialogInfo(){
                 <h2>Other tips and resources</h2>
                 <p>h1 okay, link to other a11y content</p>
             </section>
-        </div>
+        </>
     );
 }
 

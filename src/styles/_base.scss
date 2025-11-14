@@ -1,0 +1,92 @@
+/* ================================
+   Base Styles
+   ================================ */
+
+* {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: var(--font-body);
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#root {
+  margin: 0 auto;
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+button {
+  background: var(--color-btn-bg);
+  color: var(--color-btn-text);
+  border: none;
+  border-radius: 6px;
+  padding: 0.6rem 1.2rem;
+  font-size: .9rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+
+  &:hover,
+  &:focus {
+    background-color: var(--color-btn-bg-hover);
+    color: var(--color-btn-text-hover);
+  }
+}
+
+a {
+  color: var(--color-link);
+  transition: color 0.2s ease;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: var(--color-link-hover);
+    text-decoration: underline;
+  }
+}
+
+section {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Yeseva One", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+p,
+ul {
+  margin-bottom: 1rem;
+}
+
+ul {
+  padding-left: 2.5rem;
+}
+
+header, main, footer {
+  padding: 2rem;
+}

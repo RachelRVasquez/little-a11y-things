@@ -1,0 +1,79 @@
+/* ================================
+   Header Styles
+   ================================ */
+
+header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: var(--color-header-bg);
+  padding: 1.5rem 2rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  nav {
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    display: flex;
+    align-content: space-between;
+    justify-content: center;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    font-size: .9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    list-style: none;
+
+    a {
+      text-decoration: none;
+
+      &:hover,
+      &:active,
+      &:focus {
+        text-decoration: none;
+      }
+
+      &.current {
+        border-bottom: 2px solid var(--color-link);
+      }
+    }
+  }
+}
+
+.github-corner {
+  .octo-cat {
+    fill: #e15151;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    border: 0;
+    right: 0;
+  }
+
+  .octo-arm {
+    transform-origin: 130px 106px;
+  }
+
+  &:hover,
+  &:focus {
+    .octo-arm {
+      animation: octocat-wave 560ms ease-in-out;
+    }
+  }
+
+  @keyframes octocat-wave {
+    0%, 100% {
+      transform: rotate(0)
+    }
+    20%, 60% {
+      transform: rotate(-25deg)
+    }
+    40%, 80% {
+      transform: rotate(10deg)
+    }
+  }
+}

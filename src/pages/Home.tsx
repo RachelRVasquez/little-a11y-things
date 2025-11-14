@@ -1,6 +1,6 @@
 export default function Home() {
     return (
-        <section className="home">
+        <section id="home">
             <h1>Little A11y Things</h1>
             <p className="tagline">It's the little things that make a big difference.</p>
 

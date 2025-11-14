@@ -4,13 +4,13 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import DialogPage from "./pages/DialogPage";
 import NotFound from "./pages/NotFound";
-import './App.scss'
+import './styles/main.scss'
 
 function App() {
   return (
       <BrowserRouter>
           <Header />
-          <main className="app-content">
+          <main className="page-content">
               <Routes>
                   <Route path="/" element={<Home />} />
                   <Route path="/dialog" element={<DialogPage />} />

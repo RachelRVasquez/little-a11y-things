@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import ThemeToggle from "./ThemeToggle.tsx";
+import GithubCat from "./GithubCat.tsx";
 function Header(){
     return (
         <header>
@@ -21,6 +22,7 @@ function Header(){
                 </ul>
             </nav>
             <ThemeToggle />
+            <GithubCat />
         </header>
     );
 }
