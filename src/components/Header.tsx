@@ -1,25 +1,30 @@
-import { NavLink } from "react-router-dom";
-import ThemeToggle from "./ThemeToggle.tsx";
+import {NavLink} from "react-router-dom";
 import GithubCat from "./GithubCat.tsx";
-function Header(){
+
+function Header() {
     return (
         <header>
+            <h1>Little A11y Things</h1>
             <nav>
                 <ul>
                     <li>
-                        <NavLink to="/" className={({ isActive }) => (isActive ? "current" : "")}>
+                        <NavLink to="/" className={({isActive}) => (isActive ? "current" : "")}>
                             Home
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/dialog" className={({ isActive }) => (isActive ? "current" : "")}>
+                        <NavLink to="/buttons" className={({isActive}) => (isActive ? "current" : "")}>
+                            Buttons
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/dialog" className={({isActive}) => (isActive ? "current" : "")}>
                             Dialog
                         </NavLink>
                     </li>
                 </ul>
             </nav>
-            <ThemeToggle />
-            <GithubCat />
+            <GithubCat/>
         </header>
     );
 }

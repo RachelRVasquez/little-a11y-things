@@ -4,9 +4,50 @@
 
 
 footer {
+  position: relative;
   background: var(--color-footer-bg);
   color: #ffffff;
   text-align: center;
   padding: 2rem 1rem;
   font-size: 0.9rem;
+
+  ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  a {
+    color: var(--color-teal-light);
+    text-decoration: none;
+
+    &.current {
+      border-bottom: 2px solid var(--color-teal-light);
+    }
+
+    &:hover, &:active, &:focus {
+      text-decoration: none;
+    }
+  }
+
+  .socials {
+    margin-top: 1rem;
+    a {
+      border: 2px solid var(--color-teal-light);
+      border-radius: 6px;
+      padding: .5rem 10px;
+    }
+  }
+
+  .footer-copyright {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+     p {
+       text-align: center;
+     }
+  }
 }

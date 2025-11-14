@@ -2,12 +2,56 @@
    Page content styles
    ================================ */
 
+#btn-theme-toggle {
+  margin: auto;
+  display: flex;
+  align-items: center;
+
+  .theme-icon {
+    margin-right:.8rem;
+    
+    &#light-icon svg {
+      width: 32px;
+    }
+
+    &#dark-icon svg {
+      width: 25px;
+    }
+  }
+}
+
 #home {
   text-align: center;
+}
+
+#definitions {
+  text-align: left;
 }
 
 .tagline {
   font-style: italic;
   font-size: 1.3rem;
   color: var(--color-teal-dark);
+}
+
+.component-desc {
+  section {
+    border-top: 1px solid #edecec;
+  }
+}
+
+.demo-area {
+  border: 3px dashed #EDECECFF;
+  opacity: 0.8;
+  background: repeating-linear-gradient( -45deg, #EDECEC, #EDECEC 6.5px, #ffffff 6.5px, #ffffff 32.5px );
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  width: 100%;
+  min-height: 100px;
+
+  .dialog-trigger {
+    margin: auto;
+    display: block;
+  }
 }

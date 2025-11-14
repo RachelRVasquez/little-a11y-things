@@ -6,7 +6,7 @@ import DialogInfo from "../components/DialogExample/DialogInfo";
 export default function DialogPage() {
     return(
         <section id="dialog-page">
-            <h1>Little A11y Dialog</h1>
+            <h2>Dialogs</h2>
             <Tabs
                 tabs={[
                     { label: "Visual Mode", content: <DialogVisualMode /> },

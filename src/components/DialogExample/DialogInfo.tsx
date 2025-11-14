@@ -3,14 +3,12 @@ function DialogInfo(){
     return(
         <>
             <section>
-                <h2>
+                <h3>
                     What is it?
-                </h2>
-                <p>A
-                    <Link to={{
+                </h3>
+                <p>A <Link to={{
                     pathname: "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dialog/" }}
-                     target="_blank">dialog element</Link>
-                    is the semantic way to create a modal dialog or non-modal dialog. It comes with built attributes and functions
+                     target="_blank">dialog element</Link> is the semantic way to create a modal dialog or non-modal dialog. It comes with built attributes and functions
                     that can be used to control its behavior without having to write Javascript for common sense things like opening
                     and closing the dialog.
                 </p>
@@ -18,14 +16,13 @@ function DialogInfo(){
                     with tricky z-index's and styles - unless you want to! The backdrop can be styled via CSS.</p>
             </section>
             <section>
-                <h2>
+                <h3>
                     What the heck is a modal dialog and a non-modal dialog?
-                </h2>
+                </h3>
                 <p>A "modal" and a "dialog" are not the same thing. Surprised? Same bro, blew my mine when I learned this.</p>
                 <p>The <Link to={{
                     pathname: "https://www.a11y-collective.com/blog/modal-vs-dialog/"}}
-                    target="_blank">A11y Collection</Link>
-                 has a nice in-depth review of the differences, but here's the gist of it:</p>
+                    target="_blank">A11y Collection</Link> has a nice in-depth review of the differences, but here's the gist of it:</p>
                 <h3>Modal dialogs</h3>
                 <p>Modal dialogs block interaction with the rest of the page. For UX reasons, you want to take care with these. Here
                 are a few examples of ways you can use a modal dialog.</p>
@@ -47,18 +44,18 @@ function DialogInfo(){
                 </ul>
             </section>
             <section>
-                <h2>ARIA attributes</h2>
+                <h3>ARIA attributes</h3>
                 <p>Write about aria-controls/has-popup</p>
                 <code>Code sample for button and dialog with nothing in it to show attrs</code>
             </section>
             <section>
-                <h2>Tab-index and focus</h2>
+                <h3>Tab-index and focus</h3>
                 <p>Write about good practice to direct focus to the first focusable element in the dialog or the
                     heading. Then if it's closed, re-focus on the last element.</p>
                 <code>JS code sample here</code>
             </section>
             <section>
-                <h2>Other tips and resources</h2>
+                <h3>Other tips and resources</h3>
                 <p>h1 okay, link to other a11y content</p>
             </section>
         </>
