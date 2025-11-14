@@ -9,6 +9,7 @@
   --color-accent-light: #ff5050;
   --color-pink: #ff8282;
   --color-teal: #F1F9F9;
+  --color-teal-dark: #006b5d;
   --color-teal-light: #b2eee6;
 
   /* Light Mode */
@@ -19,14 +20,14 @@
   --color-link: var(--color-accent);
   --color-link-hover: var(--color-accent-light);
   --color-btn-bg: var(--color-primary);
-  --color-btn-bg-hover: var(--color-pink);
+  --color-btn-bg-hover: var(--color-teal-dark);
   --color-btn-text: #ffffff;
-  --color-btn-text-hover: var(--color-primary);
+  --color-btn-text-hover: #ffffff;
   --color-border: #e0e0e0;
 
   /* Font */
-  --font-body: "Josefin Sans", system-ui, sans-serif;
-  --font-size-base: 1.05rem;
+  --font-body: "Roboto", system-ui, sans-serif;
+  --font-size-base: 1rem;
   --font-size-lg: 1.25rem;
   --line-height: 1.6;
 }

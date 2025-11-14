@@ -2,14 +2,17 @@ export default function Home() {
     return (
         <section id="home">
             <h1>Little A11y Things</h1>
-            <p className="tagline">It's the little things that make a big difference.</p>
+            <p className="tagline">It's the little things that matter!</p>
 
-            <p>Welcome to my little collection of accessible things! Accessibility can feel like such a huge topic,
-                and the documentation can be tough on the eyes (and the brain.) I wanted to make
-                something that simplifies those concepts. Breaks it down into smaller pieces. Something that gets
-                straight to the point, and provides code samples that developers can grab and use in the real world.</p>
+            <h2>Welcome to my little collection of accessible things!</h2>
+            <p>Here you'll find accessible code snippets, see how said code works, and learn
+            from fluff-free documentation. I only have a <i>dialog</i> component for now, but
+            there'll be more coming soon!</p>
 
-            <p>I also wanted an excuse to use React so here you go! Enjoy!</p>
+            <p>I hope these small, or shall I say little, pieces of knowledge are easier
+                for developers to digest, and will make a big difference in the long run.</p>
+
+            <p>(I also wanted an excuse to use React so here you go! Enjoy!)</p>
         </section>
     );
 }

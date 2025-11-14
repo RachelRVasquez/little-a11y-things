@@ -16,9 +16,6 @@ function Header(){
                             Dialog
                         </NavLink>
                     </li>
-                    <li>
-                        <span>More coming soon!</span>
-                    </li>
                 </ul>
             </nav>
             <ThemeToggle />
