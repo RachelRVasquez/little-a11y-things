@@ -1,0 +1,45 @@
+/* ================================
+   Global Component Styles
+   ================================ */
+
+#btn-theme-toggle {
+  margin: auto;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  min-height: 50px;
+
+  .theme-icon {
+      width: 28px;
+
+    &#dark-icon {
+      display: none;
+    }
+  }
+}
+
+[data-theme="dark"] {
+  #btn-theme-toggle {
+    .theme-icon {
+      &#dark-icon {
+        display: block;
+      }
+
+      &#light-icon {
+        display: none;
+      }
+    }
+  }
+}
+
+.tagline {
+  font-style: italic;
+  font-size: 1.3rem;
+  color: var(--color-taglines);
+}
+
+.tip {
+  background-color: var(--color-header-bg);
+  padding: .5rem 15px;
+  border-radius: 4px;
+}

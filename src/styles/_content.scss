@@ -2,41 +2,49 @@
    Page content styles
    ================================ */
 
-#btn-theme-toggle {
-  margin: auto;
-  display: flex;
-  align-items: center;
+.tablist {
+  margin-bottom: 2rem;
+  border-bottom: 2px solid var(--color-border);
 
-  .theme-icon {
-    margin-right:.8rem;
-    
-    &#light-icon svg {
-      width: 32px;
-    }
+  .tab {
+    position: relative;
+    border: 1px solid var(--color-border);
+    border-bottom: none;
+    padding: 0.6rem 1.2rem;
+    font-size: .9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
 
-    &#dark-icon svg {
-      width: 25px;
+    &.active {
+      background-color: var(--color-btn-bg-hover);
+      color: var(--color-btn-text-hover);
+
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid var(--color-btn-bg-hover);
+      }
     }
   }
 }
 
-#home {
-  text-align: center;
-}
-
-#definitions {
-  text-align: left;
-}
-
-.tagline {
-  font-style: italic;
-  font-size: 1.3rem;
-  color: var(--color-teal-dark);
-}
-
 .component-desc {
   section {
-    border-top: 1px solid #edecec;
+    border-top: 1px solid var(--color-border);
+
+    &:first-of-type {
+      border: none;
+    }
   }
 }
 
@@ -53,5 +61,12 @@
   .dialog-trigger {
     margin: auto;
     display: block;
+  }
+}
+
+[data-theme="dark"] {
+  .demo-area {
+    border: 3px dashed #2a2a2a;
+    background: repeating-linear-gradient( -45deg, #2a2a2a, #2a2a2a 6.5px, #1a1a1a 6.5px, #1a1a1a 32.5px );
   }
 }

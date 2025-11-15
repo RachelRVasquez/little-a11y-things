@@ -1,0 +1,16 @@
+/* ================================
+   Homepage Styles
+   ================================ */
+
+#home {
+  text-align: center;
+
+  #definitions {
+    text-align: left;
+    padding-top: 0;
+
+    .glossary-word {
+      font-size: 1.2rem;
+    }
+  }
+}
