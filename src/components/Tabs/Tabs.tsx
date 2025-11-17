@@ -17,6 +17,7 @@ export default function Tabs({ tabs }: TabsProps) {
 
     return (
         <div className="tabs">
+            <p>Switch to “Code Mode” to see the code under the hood. Switch to “Visual Mode” to see the code in action.</p>
             <div
                 className="tablist"
                 role="tablist"

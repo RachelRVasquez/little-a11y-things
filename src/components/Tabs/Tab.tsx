@@ -20,7 +20,6 @@ const isActive = index === activeIndex;
             id={`tab-${index}`}
             aria-controls={`panel-${index}`}
             aria-selected={isActive}
-            tabIndex={isActive ? 0 : -1}
             className={`tab ${isActive ? "active" : ""}`}
             onClick={() => setActiveIndex(index)}
         >

@@ -45,8 +45,7 @@ function DialogVisualMode() {
 
     return (
         <div className="visual-mode-content">
-            <p>Here’s a fully functioning button that triggers a modal dialog.
-                Switch to “Code Mode” to see the code under the hood..</p>
+            <p>Here’s a fully functioning button that triggers a modal dialog.</p>
 
             <div className="demo-area">
                 <button
@@ -85,7 +84,7 @@ function DialogVisualMode() {
                             <span className="screen-reader-only">Close</span>
                         </button>
                     </div>
-                    <p id="dialog-content">This example dialog has all the necessary attributes for developers to use.</p>
+                    <p id="dialog-content">This example dialog has all the necessary attributes for developers to reference.</p>
                     <p>You can use the <code>aria-labelledby</code> and <code>aria-describedby</code> attributes to help
                         tell screen readers what this dialog is for.</p>
                     <p>You'll also notice this dialog example has blocked user interaction with the page behind by

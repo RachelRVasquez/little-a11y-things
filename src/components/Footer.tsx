@@ -20,7 +20,7 @@ function Footer() {
                 </ul>
             </div>
             <nav>
-                <ul>
+                <ul className="footer-nav">
                     <li>
                         <NavLink to="/" className={({isActive}) => (isActive ? "current" : "")}>
                             Home

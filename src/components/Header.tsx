@@ -6,7 +6,7 @@ function Header() {
         <header>
             <h1>Little A11y Things</h1>
             <nav>
-                <ul>
+                <ul className="header-nav">
                     <li>
                         <NavLink to="/" className={({isActive}) => (isActive ? "current" : "")}>
                             Home

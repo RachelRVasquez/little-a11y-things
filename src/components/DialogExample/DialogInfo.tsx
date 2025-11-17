@@ -49,35 +49,85 @@ function DialogInfo() {
                 of the dialog. Does not apply the <code>::backdrop</code> pseudo-element.</p>
             </section>
             <section>
-                <h3>ARIA attributes</h3>
+                <h3>Required attributes & keyboard behavior</h3>
                 <table>
                     <thead>
                     <tr>
                         <th>Element</th>
                         <th>ARIA attribute</th>
+                        <th>What it does</th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr>
-                        <th>Button</th>
-                        <td>blah</td>
+                        <td>Button (dialog trigger)</td>
+                        <td><code>aria-haspopup</code></td>
+                        <td>Set to “true” or “dialog” on the button that triggers the dialog.</td>
                     </tr>
                     <tr>
-                        <th>Dialog</th>
-                        <td>blah</td>
+                        <td>Button (dialog trigger)</td>
+                        <td><code>aria-controls</code></td>
+                        <td>Use it with the ID that is on your dialog. It’s how we “connect” our button to the dialog it triggers.</td>
                     </tr>
+                    <tr>
+                        <td>Dialog</td>
+                        <td><code>aria-modal</code></td>
+                        <td>Set to "true" on a modal-dialog to inform assistive technology that the content underneath the dialog is not interactive.</td>
+                    </tr>
+                    <tr>
+                        <td>Dialog</td>
+                        <td><code>aria-labelledby</code></td>
+                        <td>If your dialog has a heading or title, use its ID for this ARIA attribute.<br/>
+                            This links the dialog to its visible title, which is then read aloud by assistive technologies when the dialog appears.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Dialog</td>
+                        <td><code>aria-describedby</code></td>
+                        <td>If your dialog has a description or content, use its ID for this ARIA attribute.<br/>
+                            This links the dialog to its descriptive content, , which is then read aloud by assistive technologies when the dialog appears.
+                        </td>
+                    </tr>
+
                     </tbody>
                 </table>
+
+                <h4>Keyboard Expectations</h4>
+                <ul>
+                    <li>The Esc key should close the dialog.</li>
+                    <li>When the dialog opens, focus moves into it.</li>
+                    <li>When the dialog is closed, focus returns to the button that triggered the dialog.</li>
+                </ul>
             </section>
             <section>
-                <h3>Tab-index and focus</h3>
-                <p>Write about good practice to direct focus to the first focusable element in the dialog or the
-                    heading. Then if it's closed, re-focus on the last element.</p>
-                <code>JS code sample here</code>
+                <h3>Accessibility Gotchas</h3>
+                <ul>
+                    <li>Don’t trap focus if using a non-modal dialog.</li>
+                    <li>Make sure the first interactive element is focusable.
+                        This is usually the close button or if there’s a form in the dialog, the first field in the form.</li>
+                    <li>Don’t disable scrolling unless it’s actually modal.</li>
+                    <li>Don’t use <code>role="dialog"</code> on a <code>&lt;dialog&gt;</code> element. It’s redundant. Only use if for some reason you’re not using the dialog element.</li>
+                    <li>Do not use tab-index on the dialog element. The dialog itself is not an interactive element, and does not receive focus.</li>
+                    <li>Trying to place something that isn't already inside the <code>&lt;dialog&gt;</code> element on top using CSS <code>z-index</code> will not work.
+                    </li>
+                </ul>
             </section>
             <section>
-                <h3>Other tips and resources</h3>
-                <p>h1 okay, link to other a11y content</p>
+                <h3>Further Reading:</h3>
+                <ul>
+                    <li><Link to={{
+                        pathname: "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dialog"
+                    }} target="_blank">MDN: Dialog element</Link></li>
+                    <li><Link to={{
+                        pathname: "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/examples/dialog/"
+                    }} target="_blank">WAI-ARIA: Modal dialog example</Link></li>
+                    <li><Link to={{
+                        pathname: "https://dev.to/iam_timsmith/dialogs-vs-modals-is-there-a-difference-210k"
+                    }} target="_blank">DEV Community: Dialogs vs Modals - Is there a difference?</Link></li>
+                    <li><Link to={{
+                        pathname: "https://www.a11y-collective.com/blog/modal-vs-dialog/"
+                    }} target="_blank">A11y Collective: When to use a Modal vs Dialog components</Link></li>
+                </ul>
             </section>
         </>
     );
