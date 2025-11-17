@@ -43,3 +43,11 @@
   padding: .5rem 15px;
   border-radius: 4px;
 }
+
+.screen-reader-only {
+  @include screen-reader-only();
+}
+
+body.dialog-open {
+  overflow: hidden;
+}

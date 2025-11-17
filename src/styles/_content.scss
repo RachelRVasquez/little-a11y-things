@@ -47,26 +47,3 @@
     }
   }
 }
-
-.demo-area {
-  border: 3px dashed #EDECECFF;
-  opacity: 0.8;
-  background: repeating-linear-gradient( -45deg, #EDECEC, #EDECEC 6.5px, #ffffff 6.5px, #ffffff 32.5px );
-  padding: 1rem;
-  margin-bottom: 1rem;
-  border-radius: 6px;
-  width: 100%;
-  min-height: 100px;
-
-  .dialog-trigger {
-    margin: auto;
-    display: block;
-  }
-}
-
-[data-theme="dark"] {
-  .demo-area {
-    border: 3px dashed #2a2a2a;
-    background: repeating-linear-gradient( -45deg, #2a2a2a, #2a2a2a 6.5px, #1a1a1a 6.5px, #1a1a1a 32.5px );
-  }
-}

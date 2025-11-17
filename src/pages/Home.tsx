@@ -5,8 +5,9 @@ export default function Home() {
 
             <p className="tagline">Welcome to my little collection of accessible things!</p>
 
-            <p>Here you'll find accessible code snippets, be able to physically see the code in action, and learn
-                how the code works with no-fluff documentation.</p>
+            <p>Here you'll find accessible code snippets that you can see in action by toggling between the "Code Mode"
+                and "Visual Mode" tabs. Each page explains the barest bones of how the code works with links to
+                more in-depth resources for further reading.</p>
 
             <p>I hope these small, or shall I say <i>little</i>, pieces of knowledge are easier
                 for developers to digest.</p>

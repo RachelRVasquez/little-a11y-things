@@ -1,0 +1,61 @@
+/* ================================
+   Styles for elements in the Visual Mode tab demo area
+   ================================ */
+
+.demo-area {
+  border: 3px dashed #EDECECFF;
+  background: repeating-linear-gradient( -45deg, #EDECEC, #EDECEC 6.5px, #ffffff 6.5px, #ffffff 32.5px );
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  width: 100%;
+  min-height: 100px;
+
+  .dialog-trigger {
+    margin: auto;
+    display: block;
+  }
+
+  #example-dialog {
+    background-color: var( --color-bg);
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, .5);
+    border: none;
+    border-radius: 10px;
+    color: var( --color-text);
+    position: fixed;
+    padding: 2rem 3rem;
+    margin: auto !important;
+    height: auto;
+    max-height: fit-content;
+    max-width: 900px;
+    overflow-y: hidden;
+    width: 90vw;
+  }
+
+  #btn-dialog-close {
+    @include remove-btn-defaults;
+    width: 30px;
+    height: 30px;
+  }
+
+  .dialog-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+
+    h1 {
+      font-size: 2rem;
+    }
+  }
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, .6);
+}
+
+[data-theme="dark"] {
+  .demo-area {
+    border: 3px dashed #2a2a2a;
+    background: repeating-linear-gradient( -45deg, #2a2a2a, #2a2a2a 6.5px, #1a1a1a 6.5px, #1a1a1a 32.5px );
+  }
+}
