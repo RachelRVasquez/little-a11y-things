@@ -11,6 +11,8 @@
   --color-teal: #F1F9F9;
   --color-teal-dark: #006b5d;
   --color-teal-light: #b2eee6;
+  --color-light-orange: #ffcb81;
+  --color-bright-yellow: #fbfb88;
 
   /* Light Mode */
   --color-bg: #ffffff;
@@ -26,6 +28,9 @@
   --color-border: #e0e0e0;
   --color-taglines: var(--color-teal-dark);
   --color-table: #f9f9f9;
+  --color-demo-btn: var(--color-light-orange);
+  --color-demo-btn-text: var(--color-text);
+  --color-demo-btn-hover: var(--color-bright-yellow);
 
   /* Font */
   --font-body: "Roboto", system-ui, sans-serif;
@@ -49,4 +54,7 @@
   --color-btn-text-hover: #1a1a1a;
   --color-border: #333333;
   --color-taglines: var(--color-pink);
+  --color-demo-btn: var(--color-light-orange);
+  --color-demo-btn-text: #1a1a1a;
+  --color-demo-btn-hover: var(--color-bright-yellow);
 }

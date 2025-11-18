@@ -18,23 +18,23 @@
   }
 
   .example-btn:not(.link-style) {
-    background-color: #ffcb81;
-    color: var(--color-text);
+    background-color: var(--color-demo-btn);
+    color: var(--color-demo-btn-text);
     display: flex;
     align-items: center;
     gap: 1rem;
     height: 35px;
 
     #SVGRepo_iconCarrier path {
-      stroke: var(--color-text);
+      stroke: var(--color-demo-btn-text);
     }
 
     &:hover, &:active, &:focus {
-      background-color: #fbfb88;
-      color: var(--color-text);
+      background-color: var(--color-bright-yellow);
+      color: var(--color-demo-btn-text);
 
       #SVGRepo_iconCarrier path {
-        stroke: var(--color-text);
+        stroke: var(--color-demo-btn-text);
       }
     }
   }

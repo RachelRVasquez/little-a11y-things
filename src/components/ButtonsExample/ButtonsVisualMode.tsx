@@ -6,13 +6,16 @@ function ButtonsVisualMode(){
 
             <div className="demo-area" id="btn-demo">
                 <button type="button" className="example-btn normal">Normal button</button>
-                <button type="button" className="example-btn icon-text-left">{starIcon} Button with a left icon</button>
-                <button type="button" className="example-btn icon-text-right">Button with a right icon</button>
+                <button type="button" className="example-btn icon-text-left">{starIcon} Left icon button</button>
+                <button type="button" className="example-btn icon-text-right">Right icon button {starIcon}</button>
                 <button type="button" className="example-btn icon-only">
                     {starIcon}
                     <span className="screen-reader-only">An icon only button</span>
                 </button>
                 <button type="button" className="example-btn link-style">A button that looks like a link</button>
+                <button type="button" className="example-btn link-style">
+                    Link style and icon combo {starIcon}
+                </button>
             </div>
         </div>
     );
