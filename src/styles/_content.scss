@@ -16,10 +16,9 @@
     text-transform: uppercase;
     font-weight: 700;
     cursor: pointer;
-    transition: background-color 0.2s ease, transform 0.1s ease;
 
     &.active {
-      background-color: var(--color-btn-bg-hover);
+      background-color: var(--color-btn-bg);
       color: var(--color-btn-text-hover);
 
       &:after {
@@ -32,8 +31,19 @@
         height: 0;
         border-left: 10px solid transparent;
         border-right: 10px solid transparent;
-        border-top: 10px solid var(--color-btn-bg-hover);
+        border-top: 10px solid var(--color-btn-bg);
       }
+
+      &:hover, &:focus, &:active {
+        &:after {
+          border-top: 10px solid var(--color-btn-bg-hover);
+        }
+      }
+    }
+
+    &:hover, &:focus, &:active {
+      background-color: var(--color-btn-bg-hover);
+      color: var(--color-btn-text-hover);
     }
   }
 }

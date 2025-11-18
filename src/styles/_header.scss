@@ -11,6 +11,10 @@ header {
   text-align: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 
+  h1 {
+    text-shadow: 0 0 2px #fff;
+  }
+
   nav {
     margin-bottom: 1rem;
   }
@@ -35,6 +39,10 @@ header {
       &:active,
       &:focus {
         text-decoration: none;
+
+        &.current {
+          border-color: var(--color-link-hover);
+        }
       }
 
       &.current {

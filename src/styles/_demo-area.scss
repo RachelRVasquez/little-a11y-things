@@ -4,12 +4,50 @@
 
 .demo-area {
   border: 3px dashed #EDECECFF;
-  background: repeating-linear-gradient( -45deg, #EDECEC, #EDECEC 6.5px, #ffffff 6.5px, #ffffff 32.5px );
+  background: repeating-linear-gradient(-45deg, #EDECEC, #EDECEC 6.5px, #ffffff 6.5px, #ffffff 32.5px);
   padding: 1rem;
   margin-bottom: 1rem;
   border-radius: 6px;
   width: 100%;
   min-height: 100px;
+
+  &#btn-demo {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .example-btn:not(.link-style) {
+    background-color: #ffcb81;
+    color: var(--color-text);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    height: 35px;
+
+    #SVGRepo_iconCarrier path {
+      stroke: var(--color-text);
+    }
+
+    &:hover, &:active, &:focus {
+      background-color: #fbfb88;
+      color: var(--color-text);
+
+      #SVGRepo_iconCarrier path {
+        stroke: var(--color-text);
+      }
+    }
+  }
+
+  .example-btn.link-style {
+    @include remove-btn-defaults();
+    text-decoration: underline;
+    color: var(--color-link);
+
+    &:hover, &:active, &:focus {
+      color: var(--color-link-hover);
+    }
+  }
 
   .dialog-trigger {
     margin: auto;
@@ -17,11 +55,11 @@
   }
 
   #example-dialog {
-    background-color: var( --color-bg);
+    background-color: var(--color-bg);
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, .5);
     border: none;
     border-radius: 10px;
-    color: var( --color-text);
+    color: var(--color-text);
     position: fixed;
     padding: 2rem 2.2rem;
     margin: auto !important;
@@ -47,6 +85,7 @@
       font-size: 2rem;
     }
   }
+
 }
 
 dialog::backdrop {
@@ -56,6 +95,10 @@ dialog::backdrop {
 [data-theme="dark"] {
   .demo-area {
     border: 3px dashed #2a2a2a;
-    background: repeating-linear-gradient( -45deg, #2a2a2a, #2a2a2a 6.5px, #1a1a1a 6.5px, #1a1a1a 32.5px );
+    background: repeating-linear-gradient(-45deg, #2a2a2a, #2a2a2a 6.5px, #1a1a1a 6.5px, #1a1a1a 32.5px);
+
+    #btn-dialog-close svg path {
+      fill: var(--color-accent-light);
+    }
   }
 }
