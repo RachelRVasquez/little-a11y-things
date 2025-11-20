@@ -53,48 +53,41 @@ function DialogInfo() {
                 <table>
                     <thead>
                     <tr>
-                        <th>Element</th>
                         <th>ARIA attribute</th>
                         <th>What it does</th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr>
-                        <td>Button (dialog trigger)</td>
-                        <td><code>aria-haspopup</code></td>
+                        <td><code>aria-haspopup</code> on the button (dialog trigger).</td>
                         <td>Set to “true” or “dialog” on the button that triggers the dialog.</td>
                     </tr>
                     <tr>
-                        <td>Button (dialog trigger)</td>
-                        <td><code>aria-controls</code></td>
+                        <td><code>aria-controls</code> on the button (dialog trigger).</td>
                         <td>Use it with the ID that is on your dialog. It’s how we “connect” our button to the dialog it
                             triggers.
                         </td>
                     </tr>
                     <tr>
-                        <td>Dialog</td>
-                        <td><code>aria-modal</code></td>
+                        <td><code>aria-modal</code> on the dialog element.</td>
                         <td>Set to "true" on a modal-dialog to inform assistive technology that the content underneath
                             the dialog is not interactive.
                         </td>
                     </tr>
                     <tr>
-                        <td>Dialog</td>
-                        <td><code>aria-labelledby</code></td>
+                        <td><code>aria-labelledby</code> on the dialog element.</td>
                         <td>If your dialog has a heading or title, use its ID for this ARIA attribute.<br/>
                             This links the dialog to its visible title, which is then read aloud by assistive
                             technologies when the dialog appears.
                         </td>
                     </tr>
                     <tr>
-                        <td>Dialog</td>
-                        <td><code>aria-describedby</code></td>
+                        <td><code>aria-describedby</code> on the dialog element.</td>
                         <td>If your dialog has a description or content, use its ID for this ARIA attribute.<br/>
                             This links the dialog to its descriptive content, , which is then read aloud by assistive
                             technologies when the dialog appears.
                         </td>
                     </tr>
-
                     </tbody>
                 </table>
 

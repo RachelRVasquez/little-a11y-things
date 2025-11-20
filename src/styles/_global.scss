@@ -18,20 +18,6 @@
   }
 }
 
-[data-theme="dark"] {
-  #btn-theme-toggle {
-    .theme-icon {
-      &#dark-icon {
-        display: block;
-      }
-
-      &#light-icon {
-        display: none;
-      }
-    }
-  }
-}
-
 .tagline {
   font-style: italic;
   font-size: 1.3rem;
@@ -58,4 +44,18 @@
 
 body.dialog-open {
   overflow: hidden;
+}
+
+[data-theme="dark"] {
+  #btn-theme-toggle {
+    .theme-icon {
+      &#dark-icon {
+        display: block;
+      }
+
+      &#light-icon {
+        display: none;
+      }
+    }
+  }
 }

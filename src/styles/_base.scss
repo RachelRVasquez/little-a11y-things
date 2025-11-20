@@ -107,8 +107,11 @@ ul {
 }
 
 ul {
-  padding-left: 1rem;
   list-style: none;
+
+  @include tablet-up {
+    padding-left: 1rem;
+  }
 
   &:not(.socials):not(.header-nav):not(.footer-nav) {
     li {
@@ -145,6 +148,12 @@ hr {
 pre {
   //for syntax highlighter
   margin-bottom: 1rem !important;
+  width: 100%;
+  max-width: 80vw;
+
+  @include tablet-up {
+    max-width: unset;
+  }
 }
 
 table, caption, tbody, tfoot, thead, tr, th, td {
@@ -169,7 +178,7 @@ table {
     text-align: left;
 
     &:first-of-type {
-      width: 15%;
+      width: 33%;
     }
   }
 
