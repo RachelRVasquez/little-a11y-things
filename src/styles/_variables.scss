@@ -58,3 +58,14 @@
   --color-demo-btn-text: #1a1a1a;
   --color-demo-btn-hover: var(--color-bright-yellow);
 }
+
+/* Grid breakpoints */
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        mobile: 767px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px,
+        xxl: 1400px
+);

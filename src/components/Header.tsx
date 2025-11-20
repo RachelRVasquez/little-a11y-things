@@ -22,6 +22,11 @@ function Header() {
                             Dialog
                         </NavLink>
                     </li>
+                    <li>
+                        <NavLink to="/upcoming" className={({isActive}) => (isActive ? "current" : "")}>
+                            Upcoming features
+                        </NavLink>
+                    </li>
                 </ul>
             </nav>
             <GithubCat/>

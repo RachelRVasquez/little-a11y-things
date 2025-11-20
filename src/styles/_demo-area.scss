@@ -13,17 +13,28 @@
 
   &#btn-demo {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    gap: 10px;
     align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    @include tablet-up {
+      flex-direction: row;
+    }
   }
 
-  .example-btn:not(.link-style) {
-    background-color: var(--color-demo-btn);
-    color: var(--color-demo-btn-text);
+  .example-btn {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    justify-content: center;
+    gap: .5rem;
     height: 35px;
+  }
+
+  .example-btn:not(.link-style):not(.link-style-combo) {
+    background-color: var(--color-demo-btn);
+    color: var(--color-demo-btn-text);
 
     #SVGRepo_iconCarrier path {
       stroke: var(--color-demo-btn-text);
@@ -39,13 +50,21 @@
     }
   }
 
-  .example-btn.link-style {
+  .example-btn.link-style,
+  .example-btn.link-style-combo {
     @include remove-btn-defaults();
-    text-decoration: underline;
     color: var(--color-link);
+
+    #SVGRepo_iconCarrier path {
+      stroke: var(--color-link);
+    }
 
     &:hover, &:active, &:focus {
       color: var(--color-link-hover);
+
+      #SVGRepo_iconCarrier path {
+        stroke: var(--color-link-hover);
+      }
     }
   }
 

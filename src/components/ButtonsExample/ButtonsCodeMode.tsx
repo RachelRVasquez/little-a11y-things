@@ -1,38 +1,44 @@
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { oneDark, oneLight } from "react-syntax-highlighter/dist/esm/styles/prism";
 
-const dialogButtonCode = `<button className="dialog-trigger" aria-haspopup="dialog" aria-controls="example-dialog">
-  Click for magic
+const dialogButtonCode = `// Normal button
+<button type="button" class="example-btn normal">Normal button</button>
+
+// Button with an SVG icon on the left, uses the aria-hidden attribute set to "true"
+<button type="button" class="example-btn icon-text-left">
+    <span aria-hidden="true"><svg>...</svg></span> Left icon button
+</button>
+
+// Button with an SVG icon on the right, uses the aria-hidden attribute set to "true"
+<button type="button" class="example-btn icon-text-right">
+    Right icon button <span aria-hidden="true"><svg>...</svg></span>
+</button>
+
+// An SVG icon button without visible text. Includes screen reader only text.
+<button type="button" class="example-btn icon-only">
+    <span aria-hidden="true"><svg>...</svg></span>
+    <span class="screen-reader-only">An icon only button</span>
+</button>
+
+// Buttons can look like links with the right CSS.
+<button type="button" class="example-btn link-style">Link styled button</button>
+
+// An icon only button, even if it looks like a link, should still use aria-hidden set to "true".
+<button type="button" class="example-btn link-style-combo">
+    Link styled icon combo
+    <span aria-hidden="true"><svg>...</svg></span>
 </button>`;
 
 function DialogCodeMode() {
     return (
         <div className="visual-mode-content">
-            <p>Here's the code behind the working button:</p>
+            <p>Here's the code behind the working buttons:</p>
             <SyntaxHighlighter language="html" style={oneDark}>
                 {dialogButtonCode}
             </SyntaxHighlighter>
-
-            <p>And here's the code behind the dialog element:</p>
-            <pre>
-                <code>
-                      <dialog id="example-dialog" className="" aria-labelledby="dialog-title" aria-describedby="dialog-desc">
-
-                                  <h1 className="">Magic is happening here!</h1>
-                                  <button className="btn-close-dialog" aria-label="Close dialog" type="button">
-                                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                           fill="none">
-                                          <path
-                                              d="M18 7.05L16.95 6L12 10.95L7.05 6L6 7.05L10.95 12L6 16.95L7.05 18L12 13.05L16.95 18L18 16.95L13.05 12L18 7.05Z"
-                                              fill="currentColor"></path>
-                                      </svg>
-                                      <span className="screen-reader-text">Close</span>
-                                  </button>
-                          <p>Just a little dialog with a lot of accessible power!</p>
-                      </dialog>
-                  </code>
-            </pre>
-
+            <p className="tip no-margin">Note that icons can be implemented in different ways. While my examples use
+            SVGs, some people use icon fonts or HTML symbol entities. It's good practice to ensure screen readers
+            don't attempt to read icons with the <code>aria-hidden</code> attribute.</p>
         </div>
     );
 }

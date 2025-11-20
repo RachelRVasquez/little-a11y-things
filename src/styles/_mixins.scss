@@ -1,5 +1,25 @@
+/* RESPONSIVE ---------------- */
+@mixin mobile-only {
+  @media (max-width: map-get($grid-breakpoints, mobile)) {
+    @content;
+  }
+}
+
+@mixin tablet-up {
+  @media (min-width: map-get($grid-breakpoints, md)) {
+    @content;
+  }
+}
+
+@mixin large-up {
+  @media (min-width: map-get($grid-breakpoints, lg)) {
+    @content;
+  }
+}
+
+/* UTILITIES ---------------- */
 @mixin remove-btn-defaults() {
-  padding: 0;
+  padding: 0; // can remove or set as a parameter
   background: none;
   border: none;
   border-radius: 0;

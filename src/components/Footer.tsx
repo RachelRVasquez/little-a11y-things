@@ -1,45 +1,34 @@
-import {Link, NavLink} from "react-router-dom";
-
 function Footer() {
     return (
         <footer>
             <div className="footer-section">
+                <div className="support">
+                    <a href="https://buymeacoffee.com/rrvasquez" target="_blank" className="btn-style">
+                        ☕ Buy me a coffee!
+                    </a>
+                </div>
                 <ul className="socials">
-                    <li><Link to={{
-                        pathname: "https://rrvasquez.com/blog" }}
-                              target="_blank">Blog</Link></li>
-                    <li><Link to={{
-                        pathname: "https://x.com/RachelRVasquez" }}
-                              target="_blank">X</Link></li>
-                    <li><Link to={{
-                            pathname: "https://www.linkedin.com/in/rachelrvasquez/" }}
-                            target="_blank">Linkedin</Link></li>
-                    <li><Link to={{
-                        pathname: "https://github.com/RachelRVasquez" }}
-                              target="_blank">Github</Link></li>
+                    <li>
+                        <a href="https://rrvasquez.com/blog" target="_blank">
+                            Blog</a>
+                    </li>
+                    <li>
+                        <a href="https://x.com/RachelRVasquez" target="_blank">
+                            X</a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/rachelrvasquez/" target="_blank">
+                            Linkedin</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/RachelRVasquez" target="_blank">
+                            Github</a>
+                    </li>
                 </ul>
             </div>
-            <nav>
-                <ul className="footer-nav">
-                    <li>
-                        <NavLink to="/" className={({isActive}) => (isActive ? "current" : "")}>
-                            Home
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/buttons" className={({isActive}) => (isActive ? "current" : "")}>
-                            Buttons
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/dialog" className={({isActive}) => (isActive ? "current" : "")}>
-                            Dialog
-                        </NavLink>
-                    </li>
-                </ul>
-            </nav>
             <div className="footer-copyright">
-                <p>Lovingly crafted by RRVasquez - {new Date().getFullYear()}</p>
+                <p>Lovingly crafted by <a href="https://rrvasquez.com"
+                                          target="_blank">RRVasquez</a> in {new Date().getFullYear()}</p>
             </div>
         </footer>
     );

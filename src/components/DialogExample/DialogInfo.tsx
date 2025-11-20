@@ -36,7 +36,7 @@ function DialogInfo() {
                     <li>For legal notifications that need to be acknowledged or agreed to.</li>
                 </ul>
                 <p className="tip"><b>Tip:</b> Use the <code>showModal()</code> function so that the dialog displays
-                on the top layer along with a <code>::backdrop</code> pseudo-element.</p>
+                    on the top layer along with a <code>::backdrop</code> pseudo-element.</p>
                 <h4>Non-modal dialog</h4>
                 <p>Non-modal dialogs provide info or options without preventing interaction with the content behind it.
                     Here are a few examples of when to use a non-modal dialog:</p>
@@ -46,7 +46,7 @@ function DialogInfo() {
                     <li>Optional settings and preferences.</li>
                 </ul>
                 <p className="tip"><b>Tip:</b> Use the <code>show()</code> function to allow interaction outside
-                of the dialog. Does not apply the <code>::backdrop</code> pseudo-element.</p>
+                    of the dialog. Does not apply the <code>::backdrop</code> pseudo-element.</p>
             </section>
             <section>
                 <h3>Required attributes & keyboard behavior</h3>
@@ -67,32 +67,38 @@ function DialogInfo() {
                     <tr>
                         <td>Button (dialog trigger)</td>
                         <td><code>aria-controls</code></td>
-                        <td>Use it with the ID that is on your dialog. It’s how we “connect” our button to the dialog it triggers.</td>
+                        <td>Use it with the ID that is on your dialog. It’s how we “connect” our button to the dialog it
+                            triggers.
+                        </td>
                     </tr>
                     <tr>
                         <td>Dialog</td>
                         <td><code>aria-modal</code></td>
-                        <td>Set to "true" on a modal-dialog to inform assistive technology that the content underneath the dialog is not interactive.</td>
+                        <td>Set to "true" on a modal-dialog to inform assistive technology that the content underneath
+                            the dialog is not interactive.
+                        </td>
                     </tr>
                     <tr>
                         <td>Dialog</td>
                         <td><code>aria-labelledby</code></td>
                         <td>If your dialog has a heading or title, use its ID for this ARIA attribute.<br/>
-                            This links the dialog to its visible title, which is then read aloud by assistive technologies when the dialog appears.
+                            This links the dialog to its visible title, which is then read aloud by assistive
+                            technologies when the dialog appears.
                         </td>
                     </tr>
                     <tr>
                         <td>Dialog</td>
                         <td><code>aria-describedby</code></td>
                         <td>If your dialog has a description or content, use its ID for this ARIA attribute.<br/>
-                            This links the dialog to its descriptive content, , which is then read aloud by assistive technologies when the dialog appears.
+                            This links the dialog to its descriptive content, , which is then read aloud by assistive
+                            technologies when the dialog appears.
                         </td>
                     </tr>
 
                     </tbody>
                 </table>
 
-                <h4>Keyboard Expectations</h4>
+                <h4>Keyboard expectations</h4>
                 <ul>
                     <li>The Esc key should close the dialog.</li>
                     <li>When the dialog opens, focus moves into it.</li>
@@ -100,34 +106,69 @@ function DialogInfo() {
                 </ul>
             </section>
             <section>
-                <h3>Accessibility Gotchas</h3>
+                <h3>Accessibility gotchas</h3>
                 <ul>
                     <li>Don’t trap focus if using a non-modal dialog.</li>
                     <li>Make sure the first interactive element is focusable.
-                        This is usually the close button or if there’s a form in the dialog, the first field in the form.</li>
+                        This is usually the close button or if there’s a form in the dialog, the first field in the
+                        form.
+                    </li>
                     <li>Don’t disable scrolling unless it’s actually modal.</li>
-                    <li>Don’t use <code>role="dialog"</code> on a <code>&lt;dialog&gt;</code> element. It’s redundant. Only use if for some reason you’re not using the dialog element.</li>
-                    <li>Do not use tab-index on the dialog element. The dialog itself is not an interactive element, and does not receive focus.</li>
-                    <li>Trying to place something that isn't already inside the <code>&lt;dialog&gt;</code> element on top using CSS <code>z-index</code> will not work.
+                    <li>Don’t use <code>role="dialog"</code> on a <code>&lt;dialog&gt;</code> element. It’s redundant.
+                        Only use if for some reason you’re not using the dialog element.
+                    </li>
+                    <li>Do not use tab-index on the dialog element. The dialog itself is not an interactive element, and
+                        does not receive focus.
+                    </li>
+                    <li>Trying to place something that isn't already inside the <code>&lt;dialog&gt;</code> element on
+                        top using CSS <code>z-index</code> will not work.
                     </li>
                 </ul>
             </section>
             <section>
-                <h3>Further Reading:</h3>
+                <h3>Further reading:</h3>
                 <ul>
-                    <li><Link to={{
-                        pathname: "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dialog"
-                    }} target="_blank">MDN: Dialog element</Link></li>
-                    <li><Link to={{
-                        pathname: "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/examples/dialog/"
-                    }} target="_blank">WAI-ARIA: Modal dialog example</Link></li>
-                    <li><Link to={{
-                        pathname: "https://dev.to/iam_timsmith/dialogs-vs-modals-is-there-a-difference-210k"
-                    }} target="_blank">DEV Community: Dialogs vs Modals - Is there a difference?</Link></li>
-                    <li><Link to={{
-                        pathname: "https://www.a11y-collective.com/blog/modal-vs-dialog/"
-                    }} target="_blank">A11y Collective: When to use a Modal vs Dialog components</Link></li>
+                    <li>
+                        <a
+                            href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dialog"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            MDN: Dialog element
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/examples/dialog/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            WAI-ARIA: Modal dialog example
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="https://dev.to/iam_timsmith/dialogs-vs-modals-is-there-a-difference-210k"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            DEV Community: Dialogs vs Modals — Is there a difference?
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="https://www.a11y-collective.com/blog/modal-vs-dialog/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            A11y Collective: When to use Modal vs Dialog components
+                        </a>
+                    </li>
                 </ul>
+
             </section>
         </>
     );
