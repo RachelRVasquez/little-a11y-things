@@ -101,11 +101,11 @@ function DialogInfo() {
                         This is usually the close button or if there’s a form in the dialog, the first field in the
                         form.
                     </li>
-                    <li>Don’t disable scrolling unless it’s a dialog modal.</li>
+                    <li>Don’t disable scrolling unless it’s a modal dialog.</li>
                     <li>Don’t use <code>role="dialog"</code> on a <code>&lt;dialog&gt;</code> element. It’s redundant.
                         Only use if for some reason you’re not using the dialog element.
                     </li>
-                    <li>Do not use tab-index on the dialog element. The dialog itself is not an interactive element, and
+                    <li>Do not use <code>tab-index</code> on the dialog element. The dialog itself is not an interactive element, and
                         does not receive focus.
                     </li>
                     <li>Trying to place something that isn't already inside the <code>&lt;dialog&gt;</code> element on
