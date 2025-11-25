@@ -1,5 +1,3 @@
-import {Link} from "react-router-dom";
-
 function DialogInfo() {
     return (
         <>
@@ -21,19 +19,16 @@ function DialogInfo() {
                 </h3>
                 <p>A "modal" and a "dialog" are not the same thing. Surprised? Same bro, blew my mine when I learned
                     this.</p>
-                <p>The <Link to={{
-                    pathname: "https://www.a11y-collective.com/blog/modal-vs-dialog/"
-                }}
-                             target="_blank">A11y Collection</Link> has a nice in-depth review of the differences, but
+                <p>The <a href="https://www.a11y-collective.com/blog/modal-vs-dialog/" rel="noopener noreferrer" target="_blank">A11y Collection</a> has a nice in-depth review of the differences, but
                     here's the gist of it:</p>
                 <h4>Modal dialogs</h4>
                 <p>Modal dialogs block interaction with the rest of the page.
                     Here are a few examples of when to use a modal dialog.</p>
                 <ul>
-                    <li>Confirming destructive actions like before deleting data that's irreversible.</li>
+                    <li>Confirming destructive actions like deleting data that's irreversible.</li>
                     <li>Collecting required payment details.</li>
                     <li>Critical warnings and alerts.</li>
-                    <li>For legal notifications that need to be acknowledged or agreed to.</li>
+                    <li>For legal terms that need to be acknowledged or agreed to.</li>
                 </ul>
                 <p className="tip"><b>Tip:</b> Use the <code>showModal()</code> function so that the dialog displays
                     on the top layer along with a <code>::backdrop</code> pseudo-element.</p>
@@ -106,7 +101,7 @@ function DialogInfo() {
                         This is usually the close button or if there’s a form in the dialog, the first field in the
                         form.
                     </li>
-                    <li>Don’t disable scrolling unless it’s actually modal.</li>
+                    <li>Don’t disable scrolling unless it’s a dialog modal.</li>
                     <li>Don’t use <code>role="dialog"</code> on a <code>&lt;dialog&gt;</code> element. It’s redundant.
                         Only use if for some reason you’re not using the dialog element.
                     </li>

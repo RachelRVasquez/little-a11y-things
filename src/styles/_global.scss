@@ -9,6 +9,10 @@
   align-items: center;
   min-height: 50px;
 
+  &:focus-visible {
+    outline-color: var(--color-btn-bg);
+  }
+
   .theme-icon {
       width: 28px;
 

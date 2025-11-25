@@ -38,10 +38,13 @@ function ButtonsInfo() {
                     When to use it?
                 </h3>
                 <ul>
-                    <li>Dialogs</li>
-                    <li>Popovers</li>
-                    <li>Expanding/collapsing mobile menus</li>
-                    <li>Changing between light and dark theme (like my "Toggle theme" button on this site)</li>
+                    <li>To trigger dialogs.</li>
+                    <li>To trigger popovers.</li>
+                    <li>To expand and collapse a mobile menu.</li>
+                    <li>To toggle between light and dark themes, like the button on this site!</li>
+                    <li>To add or remove rows of data within a form before submission.</li>
+                    <li>To add an item to a shopping cart.</li>
+                    <li>And more! This is by no means a full-list of what you can use buttons for.</li>
                 </ul>
             </section>
             <section>
@@ -88,9 +91,17 @@ function ButtonsInfo() {
 
                 <h4>Keyboard expectations</h4>
                 <ul>
-                    <li>There should always be a visible <code>:focus</code> or <code>:focus-within</code> style on
-                        buttons.
-                        It can be the same as your <code>:hover</code> style, an outline, or something different.
+                    <li>There should always be a visible <code>:focus</code> and <code>:focus-visible</code> style on
+                        buttons. A <code>:focus-within</code> style if there are child elements for that button.
+                        It can be the same as your <code>:hover</code> style, an outline, or something different. Not
+                        sure
+                        what's the difference between them are?
+                        You can read about <a
+                            href="https://bharathvaj-ganesan.medium.com/focus-vs-focus-within-vs-focus-visible-2db18593495b"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >"Focus vs focus-within vs focus-visible"
+                            on Medium.</a>
                     </li>
                 </ul>
             </section>
@@ -103,7 +114,8 @@ function ButtonsInfo() {
                         for screen readers to read out loud.
                     </li>
                     <li>Prevent screen readers from trying to read out
-                        SVG icons with aria-hidden=”true”. I’ve given examples in the demo area further up the page.
+                        SVG icons with <code>aria-hidden=”true”</code>. I’ve given examples in the demo area earlier in
+                        this page.
                     </li>
                 </ul>
                 <p className="tip"><b>Tip:</b> If styling is what makes you hesitate to use a button rather than a link,
