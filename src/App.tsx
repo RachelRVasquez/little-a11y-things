@@ -7,7 +7,7 @@ import DialogPage from "./pages/DialogPage";
 import UpcomingPage from "./pages/UpcomingPage";
 import NotFound from "./pages/NotFound";
 import ThemeToggle from "./components/ThemeToggle";
-import './styles/main.scss'
+import './styles/main.scss';
 
 function App() {
   return (
