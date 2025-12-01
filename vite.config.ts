@@ -3,6 +3,6 @@ import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
 export default defineConfig({
-    base: '/little-a11y-things/',
+    base: '/little-a11y-things',
     plugins: [react()],
 })
