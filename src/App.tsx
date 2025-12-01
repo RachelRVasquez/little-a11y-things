@@ -1,4 +1,5 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+import { HashRouter } from 'react-router-dom';
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
@@ -11,7 +12,7 @@ import './styles/main.scss';
 
 function App() {
   return (
-      <BrowserRouter>
+      <HashRouter>
           <Header />
           <main className="page-content">
               <ThemeToggle />
@@ -24,7 +25,7 @@ function App() {
               </Routes>
           </main>
           <Footer />
-      </BrowserRouter>
+      </HashRouter>
   )
 }
 
