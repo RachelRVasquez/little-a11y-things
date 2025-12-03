@@ -8,22 +8,22 @@ function Header() {
             <nav>
                 <ul className="header-nav">
                     <li>
-                        <NavLink to="/" className={({isActive}) => (isActive ? "current" : "")}>
+                        <NavLink to="/" className={({isActive}) => (isActive ? "current header-link" : "header-link")}>
                             Home
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/buttons" className={({isActive}) => (isActive ? "current" : "")}>
+                        <NavLink to="/buttons" className={({isActive}) => (isActive ? "current header-link" : "header-link")}>
                             Buttons
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/dialog" className={({isActive}) => (isActive ? "current" : "")}>
+                        <NavLink to="/dialog" className={({isActive}) => (isActive ? "current header-link" : "header-link")}>
                             Dialog
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/upcoming" className={({isActive}) => (isActive ? "current" : "")}>
+                        <NavLink to="/upcoming" className={({isActive}) => (isActive ? "current header-link" : "header-link")}>
                             Upcoming features
                         </NavLink>
                     </li>

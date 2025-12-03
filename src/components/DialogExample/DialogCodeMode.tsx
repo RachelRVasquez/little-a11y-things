@@ -2,7 +2,7 @@ import {Prism as SyntaxHighlighter} from "react-syntax-highlighter";
 import {oneDark} from "react-syntax-highlighter/dist/esm/styles/prism";
 
 function DialogCodeMode() {
-    const dialogButtonCode = `<button class="dialog-trigger" aria-haspopup="dialog" aria-controls="example-dialog">
+    const dialogButtonCode = `<button id="btn-dialog-trigger" aria-haspopup="dialog" aria-controls="example-dialog">
   Click for magic
 </button>`;
 
@@ -18,6 +18,21 @@ function DialogCodeMode() {
     <p>You can use the...</p>
 </dialog>`;
 
+    const dialogJS = `const dialog = document.getElementById("example-dialog");
+const triggerButton = document.getElementById("btn-dialog-trigger");
+const closeButton = document.getElementById("btn-dialog-close");
+
+// opens the dialog
+triggerButton.addEventListener("click", () => {
+  dialog.showModal();
+  //or .show() depending on our type of dialog
+});
+
+// closes the dialog
+closeButton.addEventListener("click", () => {
+  dialog.close();
+});`;
+
     return (
         <div className="visual-mode-content">
             <p>Here's the code behind the working button:</p>
@@ -28,6 +43,11 @@ function DialogCodeMode() {
             <p>And here's the code behind the dialog element:</p>
             <SyntaxHighlighter language="html" style={oneDark}>
                 {dialogCode}
+            </SyntaxHighlighter>
+
+            <p>Lastly, here is some basic Javascript to open and close the dialog:</p>
+            <SyntaxHighlighter language="javascript" style={oneDark}>
+                {dialogJS}
             </SyntaxHighlighter>
         </div>
     );

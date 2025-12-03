@@ -7,6 +7,7 @@ export default function UpcomingPage() {
                 I also want to improve the code quality of this React app too. Here's what I have in mind:</p>
 
             <ul>
+                <li>New page about pagination.</li>
                 <li>New page about tabs.</li>
                 <li>New page about mobile menus.</li>
                 <li>New page about mega menus (multi-level navigations).</li>

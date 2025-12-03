@@ -16,7 +16,7 @@ html, body {
   height: 100%;
   font-family: var(--font-body);
   font-optical-sizing: auto;
-  font-weight: 500;
+  font-weight: 400;
   font-style: normal;
   font-size: var(--font-size-base);
   line-height: var(--line-height);
@@ -59,7 +59,7 @@ button:not(.tab),
   }
 }
 
-a:not(.github-corner):not(.footer-link) {
+a:not(.github-corner):not(.footer-link):not(.header-link) {
   color: var(--color-link);
   transition: all .3s ease-in-out;
 

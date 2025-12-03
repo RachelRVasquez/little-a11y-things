@@ -34,11 +34,14 @@ header {
     list-style: none;
 
     a {
+      color: var(--color-link);
+      transition: all .3s ease-in-out;
       text-decoration: none;
 
       &:hover,
       &:active,
       &:focus {
+        color: var(--color-link-hover);
         text-decoration: none;
 
         &.current {
