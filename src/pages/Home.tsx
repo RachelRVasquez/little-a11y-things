@@ -3,8 +3,6 @@ export default function Home() {
         <section id="home">
             <p className="h2-style">It's the little things that matter!</p>
 
-            <p className="tagline">Welcome to my collection of accessible things!</p>
-
             <p>Here you'll find accessible code snippets that you can see in action by toggling between "Code Mode"
                 and "Visual Mode" tabs. <br/>Each page explains <b>the barest bones</b> of how the code works with links to
                 more in-depth resources for further reading.</p>
