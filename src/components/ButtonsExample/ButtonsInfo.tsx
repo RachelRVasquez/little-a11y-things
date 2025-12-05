@@ -83,7 +83,7 @@ function ButtonsInfo() {
                     </tr>
                     </tbody>
                 </table>
-                <p className="tip"><b>Tip:</b> While it’s not required to set the <code>type</code> attribute on a
+                <p className="tip">**Tip:** While it’s not required to set the <code>type</code> attribute on a
                     button,
                     doing so prevents unintended behavior. For example, if you have a button inside of a
                     form that is not meant to be a submit button, it may trigger form submission anyway if
