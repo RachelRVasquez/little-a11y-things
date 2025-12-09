@@ -1,30 +1,15 @@
-import {useState, useEffect} from "react";
-import matter from "gray-matter";
-import {marked} from "marked";
-
 import Tabs from "../components/Tabs/Tabs";
 import ButtonsVisualMode from "../components/ButtonsExample/ButtonsVisualMode";
 import ButtonsCodeMode from "../components/ButtonsExample/ButtonsCodeMode";
 // import ButtonsInfo from "../components/ButtonsExample/ButtonsInfo";
 
-const contentFiles = import.meta.glob("/src/content/buttons/*.md", {as: "raw"});
+import { useMarkdown } from "../hooks/useMarkdown";
 
 export default function ButtonsPage() {
-    /* Hooks -------- */
-    const [mdHTML, setMdHTML] = useState<string>("");
-    //@todo: I want a re-usable component/function? to get md file and return content, do I need to pass file path every time?
-    useEffect(() => {
-        (async () => {
-            const fileImporter = contentFiles["/src/content/buttons/buttons-when.md"];
-            if (!fileImporter) return;
-
-            const raw = await fileImporter();
-            const {content} = matter(raw);
-            const html = marked.parse(content);
-
-            setMdHTML(html);
-        })();
-    }, []);
+   const whenContent = useMarkdown('buttons-when.md');
+   const attrsContent = useMarkdown('buttons-attrs.md');
+   const gotchasContent = useMarkdown('buttons-gotchas.md');
+   const resourcesContent = useMarkdown('buttons-resources.md');
 
     function createTip(content: string) {
         return (
@@ -43,9 +28,27 @@ export default function ButtonsPage() {
             />
             <div className="component-desc">
                 <section>
-                    {/*  When to use it section */}
-                    <div dangerouslySetInnerHTML={{__html: mdHTML}}/>
+                    <h3>
+                        What is it?
+                    </h3>
+                    <p>A <code>&lt;button&gt;</code> element is used for triggering actions.</p>
                     {createTip('A link is for navigation. If it takes you somewhere, it\'s a link. If it triggers an action, it should be a button.')}
+                </section>
+                <section>
+                    {/*  When to use it section */}
+                    <span dangerouslySetInnerHTML={{__html: whenContent}}/>
+                </section>
+                <section>
+                    {/*  Attributes section */}
+                    <span dangerouslySetInnerHTML={{__html: attrsContent}}/>
+                </section>
+                <section>
+                    {/*  Gotchas section */}
+                    <span dangerouslySetInnerHTML={{__html: gotchasContent}}/>
+                </section>
+                <section>
+                    {/*  Further reading section */}
+                    <span dangerouslySetInnerHTML={{__html: resourcesContent}}/>
                 </section>
             </div>
         </section>
