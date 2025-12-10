@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import matter from "gray-matter";
 import { marked } from "marked";
 
-const contentFiles = import.meta.glob("/src/content/**/*.md", { query: "?raw", import: "default" });
+const contentFiles = import.meta.glob<string>("/src/content/**/*.md", { query: "?raw", import: "default" });
 
 export function useMarkdown(fileName: string) {
     const [html, setHtml] = useState<string>("");
@@ -23,7 +23,7 @@ export function useMarkdown(fileName: string) {
             const importer = contentFiles[match];
             const raw = await importer();
             const { content } = matter(raw);
-            const parsed = marked.parse(content);
+            const parsed = marked.parse(content) as string;
 
             setHtml(parsed);
         })();

@@ -3,19 +3,14 @@ import ButtonsVisualMode from "../components/ButtonsExample/ButtonsVisualMode";
 import ButtonsCodeMode from "../components/ButtonsExample/ButtonsCodeMode";
 // import ButtonsInfo from "../components/ButtonsExample/ButtonsInfo";
 
-import { useMarkdown } from "../hooks/useMarkdown";
+import {useMarkdown} from "../hooks/useMarkdown";
+import {createTip} from "../utils/tipFormatter";
 
 export default function ButtonsPage() {
-   const whenContent = useMarkdown('buttons-when.md');
-   const attrsContent = useMarkdown('buttons-attrs.md');
-   const gotchasContent = useMarkdown('buttons-gotchas.md');
-   const resourcesContent = useMarkdown('buttons-resources.md');
-
-    function createTip(content: string) {
-        return (
-            <p className="tip"><b>Tip:</b> {content}</p>
-        );
-    }
+    const whenContent = useMarkdown('buttons-when.md');
+    const attrsContent = useMarkdown('buttons-attrs.md');
+    const gotchasContent = useMarkdown('buttons-gotchas.md');
+    const resourcesContent = useMarkdown('buttons-resources.md');
 
     return (
         <section id="dialog-page">
