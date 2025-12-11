@@ -4,6 +4,54 @@ import { marked } from "marked";
 
 const contentFiles = import.meta.glob<string>("/src/content/**/*.md", { query: "?raw", import: "default" });
 
+// Custom extension for tips
+const tipExtension = {
+    name: 'tip',
+    level: 'block' as const,
+    start(src: string) {
+        return src.match(/^:::tip/)?.index;
+    },
+    tokenizer(src: string) {
+        const rule = /^:::tip\n([\s\S]*?)\n:::/;
+        const match = rule.exec(src);
+        if (match) {
+            return {
+                type: 'tip',
+                raw: match[0],
+                text: match[1].trim()
+            };
+        }
+    },
+    renderer(token: any) {
+        return `<div class="tip" role="note" aria-label="Tip">${marked.parse(token.text)}</div>`;
+    }
+};
+
+// Override the default code renderer to prepare for SyntaxHighlighter
+const renderer = {
+    code(token: any) {
+        const code = token.text;
+        const lang = token.lang || 'text';
+        // Escape HTML entities in code
+        const escapedCode = code
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#039;');
+
+        return `<pre data-lang="${lang}" class="syntax-highlight"><code>${escapedCode}</code></pre>`;
+    }
+};
+
+// Configure marked (this runs once when the module loads)
+marked.use({
+    extensions: [tipExtension],
+    renderer,
+    mangle: false,
+    headerIds: false
+});
+
 export function useMarkdown(fileName: string) {
     const [html, setHtml] = useState<string>("");
 

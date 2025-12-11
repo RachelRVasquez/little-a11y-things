@@ -4,6 +4,7 @@ import ButtonsCodeMode from "../components/ButtonsExample/ButtonsCodeMode";
 // import ButtonsInfo from "../components/ButtonsExample/ButtonsInfo";
 
 import {useMarkdown} from "../hooks/useMarkdown";
+import { MarkdownRenderer } from '../components/MarkdownRenderer';
 import {createTip} from "../utils/tipFormatter";
 
 export default function ButtonsPage() {
@@ -31,7 +32,7 @@ export default function ButtonsPage() {
                 </section>
                 <section>
                     {/*  When to use it section */}
-                    <span dangerouslySetInnerHTML={{__html: whenContent}}/>
+                    <MarkdownRenderer content={whenContent} />
                 </section>
                 <section>
                     {/*  Attributes section */}
