@@ -23,7 +23,7 @@ const tipExtension = {
         }
     },
     renderer(token: any) {
-        return `<div class="tip" role="note" aria-label="Tip">${marked.parse(token.text)}</div>`;
+        return `<div class="tip" role="note" aria-label="Tip">${marked.parse('<b>Tip:</b> ' + token.text)}</div>`;
     }
 };
 

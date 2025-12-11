@@ -69,7 +69,7 @@ export const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({
     }, [content]);
 
     return (
-        <div
+        <section
             ref={containerRef}
             className={className}
             dangerouslySetInnerHTML={{ __html: content }}
