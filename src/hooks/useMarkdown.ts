@@ -47,9 +47,7 @@ const renderer = {
 // Configure marked (this runs once when the module loads)
 marked.use({
     extensions: [tipExtension],
-    renderer,
-    mangle: false,
-    headerIds: false
+    renderer
 });
 
 export function useMarkdown(fileName: string) {
