@@ -10,7 +10,7 @@ interface MarkdownRendererProps {
 
 export const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({
                                                                       content,
-                                                                      className = ''
+                                                                      className = 'component-desc'
                                                                   }) => {
     const containerRef = useRef<HTMLDivElement>(null);
     const rootsRef = useRef<Map<Element, ReactDOM.Root>>(new Map());
@@ -69,7 +69,7 @@ export const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({
     }, [content]);
 
     return (
-        <section
+        <div
             ref={containerRef}
             className={className}
             dangerouslySetInnerHTML={{ __html: content }}

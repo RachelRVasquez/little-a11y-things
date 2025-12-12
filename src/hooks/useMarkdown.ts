@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import matter from "gray-matter";
 import { marked } from "marked";
 
-const contentFiles = import.meta.glob<string>("/src/content/**/*.md", { query: "?raw", import: "default" });
+const contentFiles = import.meta.glob<string>("/src/content/*.md", { query: "?raw", import: "default" });
 
 // Custom extension for tips
 const tipExtension = {
@@ -71,7 +71,13 @@ export function useMarkdown(fileName: string) {
             const importer = contentFiles[match];
             const raw = await importer();
             const { content } = matter(raw);
-            const parsed = marked.parse(content) as string;
+            let parsed = marked.parse(content) as string;
+
+            // Wrap content in sections at each H3
+            parsed = parsed.replace(
+                /(<h3[^>]*>.*?<\/h3>)([\s\S]*?)(?=<h3|$)/g,
+                '<section>$1$2</section>'
+            );
 
             setHtml(parsed);
         })();
