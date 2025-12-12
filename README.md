@@ -21,3 +21,9 @@ Github pages link: [https://rachelrvasquez.github.io/little-a11y-things](https:/
 ## Bugs
 
 Find any bugs? Especially accessibility related ones? [Submit an issue to this repo.](https://github.com/RachelRVasquez/little-a11y-things/issues)
+
+## Documentation
+
+I've just started setting up files to provide documentation within the project via `.md` files. Will write these over time...
+
+- [Project Docs](src/docs/README.md)
