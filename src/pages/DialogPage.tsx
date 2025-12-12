@@ -1,9 +1,13 @@
 import Tabs from "../components/Tabs/Tabs";
 import DialogVisualMode from "../components/DialogExample/DialogVisualMode";
 import DialogCodeMode from "../components/DialogExample/DialogCodeMode";
-import DialogInfo from "../components/DialogExample/DialogInfo";
+
+import {useMarkdown} from "../hooks/useMarkdown";
+import { MarkdownRenderer } from '../components/MarkdownRenderer';
 
 export default function DialogPage() {
+    const dialogContent = useMarkdown('dialog.md');
+
     return(
         <section id="dialog-page">
             <h2>Dialogs</h2>
@@ -13,9 +17,7 @@ export default function DialogPage() {
                     { label: "Code Mode", content: <DialogCodeMode /> },
                 ]}
             />
-            <div className="component-desc">
-                <DialogInfo />
-            </div>
+            <MarkdownRenderer content={dialogContent} />
         </section>
     );
 }

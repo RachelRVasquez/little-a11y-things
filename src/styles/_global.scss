@@ -32,12 +32,9 @@
   background-color: var(--color-header-bg);
   padding: .5rem 15px;
   border-radius: 4px;
+  margin-bottom: 2rem;
 
-  &:not(.no-margin) {
-    margin-bottom: 2.5rem;
-  }
-
-  &.no-margin {
+  > p {
     margin-bottom: 0;
   }
 }
